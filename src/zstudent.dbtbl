@@ -1,0 +1,19 @@
+```abap
+@EndUserText.label: 'Student Information'
+@AbapCatalog.enhancementCategory: #NOT_ALLOWED
+@AbapCatalog.tableCategory: #TRANSPARENT
+@AbapCatalog.deliveryClass: #A
+@AbapCatalog.dataMaintenance: #RESTRICTED
+define table zstudent {
+  key client : abap.clnt not null;
+  key student_id : abap.int4 not null;
+  name : abap.string(50);
+  department : abap.string(30);
+  course : abap.string(20);
+  section : abap.char(10);
+  created_at : abp_created_at;
+  created_by : abp_created_by;
+  last_changed_at : abp_last_changed_at;
+  last_changed_by : abp_last_changed_by;
+}
+```
