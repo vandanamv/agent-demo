@@ -1,0 +1,18 @@
+```abap
+@EndUserText.label : 'Employee Table'
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #ALLOWED
+define table zemployee (
+  key client : abap.clnt not null @AbapCatalog.viewAttribute : 'Client',
+  key employee_id : abap.char(10) not null @EndUserText.label : 'Employee ID',
+  first_name : abap.string(50) @EndUserText.label : 'First Name',
+  last_name : abap.string(50) @EndUserText.label : 'Last Name',
+  age : abap.int4 @EndUserText.label : 'Age',
+  address : abap.string(255) @EndUserText.label : 'Address',
+  created_at : abp_tstmp @EndUserText.label : 'Created At',
+  created_by : abp_name @EndUserText.label : 'Created By',
+  last_changed_at : abp_tstmp @EndUserText.label : 'Last Changed At',
+  last_changed_by : abp_name @EndUserText.label : 'Last Changed By'
+);
+```
